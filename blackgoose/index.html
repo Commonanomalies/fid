@@ -6,22 +6,19 @@
 	<link rel="stylesheet" href="CSS/blackgoose.css">
 	<script>
 		var request = new XMLHttpRequest();
-		request.open('GET', 'include/header.html', true);
-
+		request.open('GET', 'include/logo.html', true);
 		request.onload = function(){
 			if(request.status >= 200 && request.status < 400){
 				var header = request.responseText;
 				document.getElementById('testLogo').innerHTML = header;
 			}
 		};
-
 		request.send();
 	</script>
 </head>
 <body>
-	<div id="testLogo"></div>
-	<h1><img src="images/blackgoose.png" alt="logo"><br>Black Goose Bistro</h1>
-
+	<div id="logo"></div>
+	
 	<h2>The Restaurant</h2>
 	<p>The Black Goose Bistro offers casual lunch and dinner fare in a relaxed atmosphere. The menu changes regularly to highlight the freshest local ingredients.</p>
 

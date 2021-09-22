@@ -4,29 +4,26 @@
 	<meta charset="utf-8">
 	<title>Black Goose Bistro</title>
 	<link rel="stylesheet" href="CSS/blackgoose.css">
-	<script src="blackgoosebistro.js"></script>
+	<script>
+		var request = new XMLHttpRequest();
+		request.open('GET', 'include/logo.html', true);
+		request.onload = function(){
+			if(request.status >= 200 && request.status < 400){
+				var header = request.responseText;
+				document.getElementById('logo').innerHTML = header;
+			}
+		};
+		request.send();
+	</script>
 </head>
 <body>
 	<div id="logo"></div>
-	<div id="topMenu">
-		<nav>
-			<a href="index.html">Home</a>
-			<a href=""></a>
-			<a href=""></a>
-		</nav>
-	</div>
+	
 	<h2>The Restaurant</h2>
 	<p>The Black Goose Bistro offers casual lunch and dinner fare in a relaxed atmosphere. The menu changes regularly to highlight the freshest local ingredients.</p>
 
 	<h2>Catering</h2>
 	<p>You have fun. <em>We'll handle the cooking.</em> Black Goose Catering can handle events from snacks for a meetup to elegant corporate fundraisers.</p>
-
-	<h2>For More Information about Yummy Foods</h2>
-	<ul>
-		<li><a href="http://www.foodnetwork.com/">The Food Network</a></li>
-		<li><a href="http://www.epicurious.com/">Epicurious</a></li>
-		<li><a href="http://www.allrecipes.com.com/">All Recipes</a></li>
-	</ul>
 
 	<h2>Location and Hours</h2>
 	<p>Seekonk, Masschusetts;<br>

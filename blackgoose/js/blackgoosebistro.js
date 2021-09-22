@@ -25,13 +25,13 @@ function menu(){
 function addFromInclude(objStrName){
 	const str = "include/";
 	const strEnd = ".html";
-	fullStr = concat(str, objStrName, strEnd);
+	fullStr = str.concat(objStrName, strEnd);
 var request = new XMLHttpRequest();
 	request.open('GET', fullStr, true);
 	request.onload = function(){
 		if(request.status >= 200 && request.status < 400){
 			var header = request.responseText;
-			document.getElementById(concat(objStrName, strEnd)).innerHTML = header;
+			document.getElementById(objStrName).innerHTML = header;
 		}
 	};
 	request.send();

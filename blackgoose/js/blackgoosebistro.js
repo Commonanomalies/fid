@@ -1,12 +1,12 @@
 
 function addFromInclude(objStrName){
 	if(objStrName == "logo"){
-		const str = "https://commonanomalies.github.io/fid/blackgoose/images/blackgoose";
-		const strEnd = ".png";
+		str = "https://commonanomalies.github.io/fid/blackgoose/images/blackgoose";
+		strEnd = ".png";
 	}
 	else{
-		const str = "https://commonanomalies.github.io/fid/blackgoose/include/";
-		const strEnd = ".html";
+		str = "https://commonanomalies.github.io/fid/blackgoose/include/";
+		strEnd = ".html";
 	}
 	
 	fullStr = str.concat(objStrName, strEnd);

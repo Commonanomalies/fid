@@ -4,17 +4,27 @@
 	<meta charset="utf-8">
 	<title>Black Goose Bistro</title>
 	<link rel="stylesheet" href="CSS/blackgoose.css">
-	<script src="js/blackgoosebistro.js?rndstr=<%= getRandomStr() %>"></script>
+	<script src="js/blackgoosebistro.js"></script>
 	<script>
 		window.onload = function(){
 			addFromInclude("logo");
-			addFromInclude("topMenu");
 		};
 	</script>
 </head>
 <body>
 	<div id="logo"></div>
-	<div id="topMenu"></div>
+	<div id="topMenu">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="bgnews.html">News</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="glossary.html" target="_blank">Glossary</a></li>
+			</ul>
+		</nav>
+	</div>
+	<h1 class="recipeHeader">Recipes</h1>
 	<div>
 		<div class="recipeDiv">
 			<a href="recipes/salmon.html" class="recipeHref"><img class="recipeImg" src="./images/salmon.jpg"><h2>Garlic Salmon</h2></a>

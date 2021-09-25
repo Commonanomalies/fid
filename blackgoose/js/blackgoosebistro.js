@@ -1,6 +1,6 @@
 
 function addFromInclude(objStrName){
-	const str = "include/";
+	const str = "https://commonanomalies.github.io/fid/blackgoose/include/";
 	const strEnd = ".html";
 	fullStr = str.concat(objStrName, strEnd);
 	var request = new XMLHttpRequest();

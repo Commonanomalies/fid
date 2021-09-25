@@ -37,3 +37,8 @@ h2{
 .recipeHref{
 	text-decoration: none;
 }
+
+.recipeHeader{
+	text-align: left;
+	border-bottom: none;
+}

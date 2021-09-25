@@ -1,16 +1,9 @@
 
 function addFromInclude(objStrName){
-	if(objStrName == "logo"){
-		str = "https://commonanomalies.github.io/fid/blackgoose/images/blackgoose";
-		strEnd = ".png";
-		fullStr = str.concat(strEnd);
-	}
-	else{
-		str = "https://commonanomalies.github.io/fid/blackgoose/include/";
-		strEnd = ".html";
-		fullStr = str.concat(objStrName, strEnd);
-	}
-	
+
+	str = "https://commonanomalies.github.io/fid/blackgoose/include/";
+	strEnd = ".html";
+	fullStr = str.concat(objStrName, strEnd);
 
 	var request = new XMLHttpRequest();
 	request.open('GET', fullStr, true);

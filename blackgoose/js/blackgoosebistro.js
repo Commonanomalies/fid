@@ -1,7 +1,14 @@
 
 function addFromInclude(objStrName){
-	const str = "https://commonanomalies.github.io/fid/blackgoose/include/";
-	const strEnd = ".html";
+	if(objStrName == "logo"){
+		const str = "https://commonanomalies.github.io/fid/blackgoose/images/blackgoose";
+		const strEnd = ".png";
+	}
+	else{
+		const str = "https://commonanomalies.github.io/fid/blackgoose/include/";
+		const strEnd = ".html";
+	}
+	
 	fullStr = str.concat(objStrName, strEnd);
 	var request = new XMLHttpRequest();
 	request.open('GET', fullStr, true);
@@ -13,3 +20,4 @@ function addFromInclude(objStrName){
 	};
 	request.send();
 }
+

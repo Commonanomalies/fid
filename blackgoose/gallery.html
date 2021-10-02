@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Black Goose Bistro</title>
+	<link rel="stylesheet" href="CSS/blackgoose.css">
+	<script src="js/blackgoosebistro.js"></script>
+	<script>
+		window.onload = function(){
+			addFromInclude("logo");
+
+			var galLink = document.getElementsByClassName("galleryLink");
+			var imageCount=galLink.length;
+			for(let i=0; i<imageCount; i++){
+				galLink[i].href ='galleryImage.html?type='+galLink[i].id;
+				// galLink[i].addEventListener('click', function(){
+					
+				// });	
+			}
+		};
+		
+		
+		
+	</script>
+</head>
+<body>
+	<div id="logo"></div>
+	<div id="topMenu">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="bgnews.html">News</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallary</a></li>
+				<li><a href="glossary.html" target="_blank">Glossary</a></li>
+			</ul>
+		</nav>
+	</div>
+	<h1>Gallery</h1>
+	<div>
+		<p>Not only is our food good, it's also good-looking! Our patrons often stop to admire our fare with a quick Instagram before digging in. We've collected a few of our favorite shots here.</p>
+		<h2>Our Baked Goods</h2>
+		<div class="galleryDiv">
+			<a id="bread" href="" class="recipeHref galleryLink"><img class="recipeImg" src="images/thumbnails/bread-200.jpg"></a>
+			<p>We start our day at the crack of dawn to bake our own muffins, bread, and dinner rolls. Loaves not used that day are donated to the local food shelter</p>
+		</div>
+		<h2>Our Burgers</h2>
+		<div class="galleryDiv">
+			<a id="burgers" href="" class="recipeHref galleryLink"><img class="recipeImg" src="images/thumbnails/burgers-200.jpg"></a>
+			<p>People come from all over to enjoy our lovingly made burgers. We grind our own locally-sourced organic beef and turkey so you know it's fresh and free from fillers and other nonsense. Go for one of our creative topping combos or stick with the classics.</p>
+		</div>
+		<h2>Catch of the Day</h2>
+		<div class="galleryDiv">
+			<a id="fish" href="" class="recipeHref galleryLink"><img class="recipeImg" src="images/thumbnails/fish-200.jpg"></a>
+			<p>Our chef works with local fisherman to pick the freshest the sea has to offer for our daily seafood special. Our Roast Cod Caponata with Roasted Potatoes is an old favorite with our regulars.</p>
+		</div>
+		<h2>Southern Fried Chicken</h2>
+		<div class="galleryDiv">
+			<a id="chicken" href="" class="recipeHref galleryLink"><img class="recipeImg" src="images/thumbnails/chicken-200.jpg"></a>
+			<p>Fried chicken from the dirty south. The best yard bird around. Why have a pet when you can have good old southern fried chicken.</p>
+		</div>
+		<h2>Fries not from the french</h2>
+		<div class="galleryDiv">
+			<a id="fries" href="" class="recipeHref galleryLink"><img class="recipeImg" src="images/thumbnails/fries-200.jpg"></a>
+			<p>What more can you ask for, fried slices of potatos dipped in the slaughtered remains of a tomato. </p>
+		</div>
+		<h2>Tabouleh not grass</h2>
+		<div class="galleryDiv">
+			<a id="tabouleh" href="" class="recipeHref galleryLink"><img class="recipeImg" src="images/thumbnails/tabouleh-200.jpg"></a>
+			<p>We dont even know what this is. It could be grass or it could be horse feed, either ways is a wonderful delight to the pallet.</p>
+		</div>
+	</div>
+</body>

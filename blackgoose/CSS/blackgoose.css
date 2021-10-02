@@ -28,10 +28,16 @@ h2{
 	height: 300px;
 }
 
-.recipeDiv{
+.recipeDiv, .galleryDiv{
 	display: inline-block;
 	padding: 5px;
 	margin: 5px;
+}
+
+#galleyImgDiv{
+	display:  block;
+	width: 100%;
+	text-align: center;
 }
 
 .recipeHref{

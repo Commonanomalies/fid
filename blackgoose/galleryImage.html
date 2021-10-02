@@ -13,7 +13,10 @@
 			const urlParams = new URLSearchParams(window.location.search);	
 			const image = urlParams.get('type');
 			var imgDiv = document.getElementById('galleyImgDiv');
-			imgDiv.innerHTML ='<img src="images/'+image+'-800.jpg">';
+			if(image == 'bread' || image == 'burgers' || image == 'fish')
+				imgDiv.innerHTML ='<picture><source media="(min-width: 480px)" srcset="images/'+image+'-1200.jpg 1200w, images/'+image+'-800 800w" sizes="80vw"><img alt="'+image+'" src="images/'+image+'-800.jpg"></picture>';
+			else
+				imgDiv.innerHTML ='<img alt="'+image+'" src="images/'+image+'-800.jpg">';
 
 			switch(image){
 				case 'bread':

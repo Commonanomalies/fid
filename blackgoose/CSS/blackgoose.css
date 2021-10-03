@@ -57,3 +57,23 @@ h2{
 	padding:  10px;
 	font-size: 24px;
 }
+
+footer{
+	display: block;
+	border-top:  1px solid #57b1bc;
+	text-align: center;
+	padding-top: 1em;
+}
+
+footer img{
+	width: 40px;
+	height:  40px;
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+footer div{
+	display: inline-block;
+	padding: 5px;
+	margin-bottom: 2em;
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Periodic Table</title>
+	<style>
+	table, td{
+		border: 1px solid #B1B1B1;
+
+	}
+	table{
+		padding: 15px;
+	}
+
+	.empty{
+		border: none;
+	}
+
+	#info{
+		border: none;
+	}
+	.tdEle{
+		width: 100px;
+	}
+	.Alkali{
+		background-color: #EACE5D;
+	}
+	.AlkaliE{
+		background-color: #F1F165;
+	}
+	.Lanthanoid{
+		background-color: #E8D19C;
+	}
+	.Actinoid{
+		background-color: #F5CCDA;
+	}
+	.Transition{
+		background-color: #FAC5B7;
+	}
+	.PostTransition{
+		background-color: #ACDFEC;
+	}
+	.Metalloid{
+		background-color: #9EE5D4;
+	}
+	.Reactive{
+		background-color: #8CED8C;
+	}
+	.NobleGas{
+		background-color: #E5BDE5;
+	}
+	.Unknown{
+		background-color: #EBEBEB;
+	}
+
+	#bigLetter{
+		font-size: 50px;
+		font-weight: bold;
+	}
+	#elvl{
+		font-size: 18px;
+	}
+	#spelling{
+		font-size: 25px;
+	}
+	#weight{
+
+	}
+	caption{
+		font-size: 80px;
+	}
+	.type{
+		text-align: center;
+	}
+	.slgu{
+		border: 1px solid black;
+	}
+	</style>
+	<script type='text/javascript'>
+		window.onload = function(){
+			var infoEle = document.querySelector('#info');
+			var tdEle = document.querySelectorAll('.tdEle');
+			var tdMType = document.querySelectorAll('.type');
+			for(var i=0; i<tdEle.length; i++){
+				tdEle[i].addEventListener('mouseover', mOver, false);
+				tdEle[i].addEventListener('mouseout', mOut, false);
+			}
+
+			for(var i=0; i<tdMType.length; i++){
+				tdMType[i].addEventListener('mouseover', mOverType, false);
+				tdMType[i].addEventListener('mouseout', mOutType, false);
+			}
+
+			function mOver(){
+				infoEle.innerHTML = '<div id="elvl">'+this.getAttribute('elvl')+' - Energy levels</div><div id="bigLetter">'+this.id+'</div><div id="spelling">'+this.getAttribute('fullName')+'</div><div id="weight">'+this.getAttribute('weight')+'u - Weight</div>';
+			}
+			function mOut(){
+				
+			}
+			function mOverType(){
+				var type = this.id;
+				var typeClass = document.getElementsByClassName(type);
+				
+				for(var i=0; i<typeClass.length; i++){
+					typeClass[i].style.backgroundColor = "orange";
+				}
+			}
+			function mOutType(){
+				var type = this.id;
+				var typeClass = document.getElementsByClassName(type);
+				
+				for(var i=0; i<typeClass.length; i++){
+					typeClass[i].style.backgroundColor = "";
+				}
+			}
+		};
+		
+	</script>
+	
+</head>
+<body>
+	<table>
+		<caption>Periodic Table</caption>
+		<tr>
+			<td elvl="1" weight="1.008" fullName="Hydrogen" class="tdEle Reactive NobleGas Gas" id="H">1<br>H</td>
+			<td colspan="2" class="empty"></td>
+			<td colspan="6" rowspan="4" id="info"></td>
+			<td colspan="1" class="empty"></td>
+			<td id="Alkali" class="type Alkali" colspan="2">Alkali Metals</td>
+			<td id="AlkaliE" class="type AlkaliE" colspan="2">Alkaline Earth Metals</td>
+			<td id="Lanthanoid" class="type Lanthanoid" colspan="2">Lanthanoids</td>
+			<td colspan="1" class="empty"></td>
+			<td colspan="2" id="Solid" class="type slgu Solid">Solid</td>
+			<td colspan="2" id="Liquid" class="type slgu Liquid">Liquid</td>
+			<td colspan="2" id="Gas" class="type slgu Gas">Gas</td>
+			<td colspan="2" id="Unknown" class="type slgu Unknown">Unknown</td>
+			<td colspan="6" class="empty"></td>
+			<td elvl="2" weight="4.0026" fullName="Helium" class="tdEle NobleGas Gas" id="He">2<br>He</td>
+		</tr>		
+		<tr>
+			<td elvl="3" weight="6.94" fullName="Lithium" class="tdEle Alkali Solid" id="Li">3<br>Li</td>
+			<td elvl="4" weight="9.0122" fullName="Beryllium" class="tdEle AlkaliE Solid" id="Be">4<br>Be</td>
+			<td colspan="1" class="empty"></td>
+			<td colspan="1" class="empty"></td>
+			<td id="Actinoid" class="type Actinoid" colspan="2">Actinoids</td>
+			<td id="Transition" class="type Transition" colspan="2">Transition Metals</td>
+			<td id="PostTransition" class="type PostTransition" colspan="2">Post Transition Metals</td>
+			<td colspan="10" class="empty"></td>
+			<td elvl="5" weight="10.81" fullName="Boron" class="tdEle Metalloid Solid" id="B">5<br>B</td>
+			<td elvl="6" weight="12.011" fullName="Carbon" class="tdEle Reactive Solid" id="C">6<br>C</td>
+			<td elvl="7" weight="14.007" fullName="Nitrogen" class="tdEle Reactive Gas" id="N">7<br>N</td>
+			<td elvl="8" weight="15.999" fullName="Oxygen" class="tdEle Reactive Gas" id="O">8<br>O</td>
+			<td elvl="9" weight="18.998" fullName="Fluorine" class="tdEle Reactive Gas" id="F">9<br>F</td>
+			<td elvl="10"weight="20.180" fullName="Neon" class="tdEle NobleGas Gas" id="Ne">10<br>Ne</td>
+		</tr>
+		<tr>
+			<td elvl="11" weight="22.990" fullName="Sodium" class="tdEle Alkali Solid" id="Na">11<br>Na</td>
+			<td elvl="12" weight="24.305" fullName="Magnesium" class="tdEle AlkaliE Solid" id="Mg">12<br>Mg</td>
+			<td colspan="1" class="empty"></td>
+			<td colspan="1" class="empty"></td>
+			<td id="Metalloid" class="type Metalloid" colspan="2">Metalloids</td>
+			<td id="Reactive" class="type Reactive" colspan="2">Reactive Nonmetals</td>
+			<td id="NobleGas" class="type NobleGas" colspan="2">Noble Gases</td>
+			<td colspan="10" class="empty"></td>
+			<td elvl="13" weight="26.982" fullName="Aluminium" class="tdEle PostTransition Solid" id="Al">13<br>Al</td>
+			<td elvl="14" weight="28.085" fullName="Silicon" class="tdEle Metalloid Solid" id="Si">14<br>Si</td>
+			<td elvl="15" weight="30.974" fullName="Phosphorus" class="tdEle Reactive Solid" id="P">15<br>P</td>
+			<td elvl="16" weight="32.06" fullName="Sulfur" class="tdEle Reactive Solid" id="S">16<br>S</td>
+			<td elvl="17" weight="35.45" fullName="Chlorine" class="tdEle Reactive Gas" id="Cl">17<br>Cl</td>
+			<td elvl="18" weight="39.948" fullName="Argon" class="tdEle NobleGas Gas" id="Ar">18<br>Ar</td>
+		</tr>
+		<tr>
+			<td elvl="19" weight="39.089" fullName="Potassium" class="tdEle Alkali Solid" id="K">19<br>K</td>
+			<td elvl="20" weight="40.078" fullName="Calcium" class="tdEle AlkaliE Solid" id="Ca">20<br>Ca</td>
+			<td colspan="14" class="empty"></td>
+			<td elvl="21" weight="44.956" fullName="Scandium" class="tdEle Transition Solid" id="Sc">21<br>Sc</td>
+			<td elvl="22" weight="47.867" fullName="Titanium" class="tdEle Transition Solid" id="Ti">22<br>Ti</td>
+			<td elvl="23" weight="50.942" fullName="Vanadium" class="tdEle Transition Solid" id="V">23<br>V</td>
+			<td elvl="24" weight="51.996" fullName="Chromium" class="tdEle Transition Solid" id="Cr">24<br>Cr</td>
+			<td elvl="25" weight="54.935" fullName="Maganese" class="tdEle Transition Solid" id="Mn">25<br>Mn</td>
+			<td elvl="26" weight="55.845" fullName="Iron" class="tdEle Transition Solid" id="Fe">26<br>Fe</td>
+			<td elvl="27" weight="58.993" fullName="Cobalt" class="tdEle Transition Solid" id="Co">27<br>Co</td>
+			<td elvl="28" weight="58.693" fullName="Nickel" class="tdEle Transition Solid" id="Ni">28<br>Ni</td>
+			<td elvl="29" weight="63.546" fullName="Copper" class="tdEle Transition Solid" id="Cu">29<br>Cu</td>
+			<td elvl="30" weight="65.38" fullName="Zinc" class="tdEle Transition Solid" id="Zn">30<br>Zn</td>
+			<td elvl="31" weight="69.723" fullName="Gallium" class="tdEle PostTransition Solid" id="Ga">31<br>Ga</td>
+			<td elvl="32" weight="72.630" fullName="Germanium" class="tdEle Metalloid Solid" id="Ge">32<br>Ge</td>
+			<td elvl="33" weight="74.922" fullName="Arsenic" class="tdEle Metalloid Solid" id="As">33<br>As</td>
+			<td elvl="34" weight="78.971" fullName="Selenium" class="tdEle Reactive Solid" id="Se">34<br>Se</td>
+			<td elvl="35" weight="79.904" fullName="Bromiem" class="tdEle Reactive Liquid" id="Br">35<br>Br</td>
+			<td elvl="36" weight="83.798" fullName="Krypton" class="tdEle NobleGas Gas" id="Kr">36<br>Kr</td>
+		</tr>
+		<tr>
+			<td elvl="37" weight="85.468" fullName="Rubidium" class="tdEle Alkali Solid" id="Rb">37<br>Rb</td>
+			<td elvl="38" weight="87.62" fullName="Strontium" class="tdEle AlkaliE Solid" id="Sr">38<br>Sr</td>
+			<td colspan="14" class="empty"></td>
+			<td elvl="39" weight="88.906" fullName="Yttrium" class="tdEle Transition Solid" id="Y">39<br>Y</td>
+			<td elvl="40" weight="91.225" fullName="Zirconium" class="tdEle Transition Solid" id="Zr">40<br>Zr</td>
+			<td elvl="41" weight="92.906" fullName="Niobium" class="tdEle Transition Solid" id="Nb">41<br>Nb</td>
+			<td elvl="42" weight="95.95" fullName="Molybdenum" class="tdEle Transition Solid" id="Mo">42<br>Mo</td>
+			<td elvl="43" weight="98" fullName="Technetium" class="tdEle Transition Solid" id="Tc">43<br>Tc</td>
+			<td elvl="44" weight="101.07" fullName="Ruthenium" class="tdEle Transition Solid" id="Ru">44<br>Ru</td>
+			<td elvl="45" weight="102.91" fullName="Rhodium" class="tdEle Transition Solid" id="Rh">45<br>Rh</td>
+			<td elvl="46" weight="106.42" fullName="Palladium" class="tdEle Transition Solid" id="Pd">46<br>Pd</td>
+			<td elvl="47" weight="107.81" fullName="Silver" class="tdEle Transition Solid" id="Ag">47<br>Ag</td>
+			<td elvl="48" weight="112.41" fullName="Cadmium" class="tdEle Transition Solid" id="Cd">48<br>Cd</td>
+			<td elvl="49" weight="114.82" fullName="Indium" class="tdEle PostTransition Solid" id="In">49<br>In</td>
+			<td elvl="50" weight="118.71" fullName="Tin" class="tdEle PostTransition Solid" id="Sn">50<br>Sn</td>
+			<td elvl="51" weight="121.76" fullName="Antimony" class="tdEle Metalloid Solid" id="Sb">51<br>Sb</td>
+			<td elvl="52" weight="127.60" fullName="Tellurium" class="tdEle Metalloid Solid" id="Te">52<br>Te</td>
+			<td elvl="53" weight="126.90" fullName="Iodien" class="tdEle Reactive Solid" id="I">53<br>I</td>
+			<td elvl="54" weight="131.29" fullName="Xenon" class="tdEle NobleGas Gas" id="Xe">54<br>Xe</td>
+		</tr>
+		<tr>
+			<td elvl="55" weight="132.91" fullName="Caesium" class="tdEle Alkali Solid" id="Cs">55<br>Cs</td>
+			<td elvl="56" weight="137.33" fullName="Barium" class="tdEle AlkaliE Solid" id="Ba">56<br>Ba</td>
+			<td elvl="57" weight="138.91" fullName="Lanthanum" class="tdEle Lanthanoid Solid" id="La">57<br>La</td>
+			<td elvl="58" weight="140.12" fullName="Cerium" class="tdEle Lanthanoid Solid" id="Ce">58<br>Ce</td>
+			<td elvl="59" weight="140.91" fullName="Praseodymium" class="tdEle Lanthanoid Solid" id="Pr">59<br>Pr</td>
+			<td elvl="60" weight="144.24" fullName="Neodymium" class="tdEle Lanthanoid Solid" id="Nd">60<br>Nd</td>
+			<td elvl="61" weight="145" fullName="Promethium" class="tdEle Lanthanoid Solid" id="Pm">61<br>Pm</td>
+			<td elvl="62" weight="150.36" fullName="Samarium" class="tdEle Lanthanoid Solid" id="Sm">62<br>Sm</td>
+			<td elvl="63" weight="151.96" fullName="Europium" class="tdEle Lanthanoid Solid" id="Eu">63<br>Eu</td>
+			<td elvl="64" weight="157.25" fullName="Gadolinium" class="tdEle Lanthanoid Solid" id="Gd">64<br>Gd</td>
+			<td elvl="65" weight="158.93" fullName="Terbium" class="tdEle Lanthanoid Solid" id="Tb">65<br>Tb</td>
+			<td elvl="66" weight="162.50" fullName="Dysprosium" class="tdEle Lanthanoid Solid" id="Dy">66<br>Dy</td>
+			<td elvl="67" weight="164.93" fullName="Holmium" class="tdEle Lanthanoid Solid" id="Ho">67<br>Ho</td>
+			<td elvl="68" weight="167.26" fullName="Erbium" class="tdEle Lanthanoid Solid" id="Er">68<br>Er</td>
+			<td elvl="69" weight="168.93" fullName="Thulium" class="tdEle Lanthanoid Solid" id="Tm">69<br>Tm</td>
+			<td elvl="70" weight="173.50" fullName="Ytterbium" class="tdEle Lanthanoid Solid" id="Yb">70<br>Yb</td>
+			<td elvl="71" weight="174.97" fullName="Lutetium" class="tdEle Lanthanoid Solid" id="Lu">71<br>Lu</td>
+			<td elvl="72" weight="178.49" fullName="Hafnium" class="tdEle Transition Solid" id="Hf">72<br>Hf</td>
+			<td elvl="73" weight="180.95" fullName="Tantalum" class="tdEle Transition Solid" id="Ta">73<br>Ta</td>
+			<td elvl="74" weight="183.84" fullName="Tungsten" class="tdEle Transition Solid" id="W">74<br>W</td>
+			<td elvl="75" weight="186.21" fullName="Rhenium" class="tdEle Transition Solid" id="Re">75<br>Re</td>
+			<td elvl="76" weight="190.23" fullName="Osmium" class="tdEle Transition Solid" id="Os">76<br>Os</td>
+			<td elvl="77" weight="192.22" fullName="Iridium" class="tdEle Transition Solid" id="Ir">77<br>Ir</td>
+			<td elvl="78" weight="195.08" fullName="Platinum" class="tdEle Transition Solid" id="Pt">78<br>Pt</td>
+			<td elvl="79" weight="196.97" fullName="Gold" class="tdEle Transition Solid" id="Au">79<br>Au</td>
+			<td elvl="80" weight="200.59" fullName="Mercury" class="tdEle Transition Liquid" id="Hg">80<br>Hg</td>
+			<td elvl="81" weight="204.38" fullName="Thallium" class="tdEle PostTransition Solid" id="Tl">81<br>Tl</td>
+			<td elvl="82" weight="207.2" fullName="Lead" class="tdEle PostTransition Solid" id="Pb">82<br>Pb</td>
+			<td elvl="83" weight="208.98" fullName="Bismuth" class="tdEle PostTransition Solid" id="Bi">83<br>Bi</td>
+			<td elvl="84" weight="209" fullName="Polonium" class="tdEle PostTransition Solid" id="Po">84<br>Po</td>
+			<td elvl="85" weight="210" fullName="Astatine" class="tdEle Metalloid Solid" id="At">85<br>At</td>
+			<td elvl="86" weight="222" fullName="Radon" class="tdEle NobleGas Gas" id="Rn">86<br>Rn</td>
+		</tr>
+		<tr>
+			<td elvl="87" weight="223" fullName="Francium" class="tdEle Alkali Solid" id="Fr">87<br>Fr</td>
+			<td elvl="88" weight="226" fullName="Radium" class="tdEle AlkaliE Solid" id="Ra">88<br>Ra</td>
+			<td elvl="89" weight="227" fullName="Actinium" class="tdEle Actinoid Solid" id="Ac">89<br>Ac</td>
+			<td elvl="90" weight="232.04" fullName="Thorium" class="tdEle Actinoid Solid" id="Th">90<br>Th</td>
+			<td elvl="91" weight="231.04" fullName="Protactinium" class="tdEle Actinoid Solid" id="Pa">91<br>Pa</td>
+			<td elvl="92" weight="238.03" fullName="Uranium" class="tdEle Actinoid Solid" id="U">92<br>U</td>
+			<td elvl="93" weight="237" fullName="Neptunium" class="tdEle Actinoid Solid" id="Np">93<br>Np</td>
+			<td elvl="94" weight="244" fullName="Ploutunium" class="tdEle Actinoid Solid" id="Pu">94<br>Pu</td>
+			<td elvl="95" weight="243" fullName="Americium" class="tdEle Actinoid Solid" id="Am">95<br>Am</td>
+			<td elvl="96" weight="247" fullName="Curium" class="tdEle Actinoid Solid" id="Cm">96<br>Cm</td>
+			<td elvl="97" weight="247" fullName="Berkelium" class="tdEle Actinoid Solid" id="Bk">97<br>Bk</td>
+			<td elvl="98" weight="251" fullName="Californium" class="tdEle Actinoid Solid" id="Cf">98<br>Cf</td>
+			<td elvl="99" weight="252" fullName="Einsteinium" class="tdEle Actinoid Solid" id="Es">99<br>Es</td>
+			<td elvl="100" weight="257" fullName="Fermium" class="tdEle Actinoid Solid" id="Fm">100<br>Fm</td>
+			<td elvl="101" weight="258" fullName="Mendelevium" class="tdEle Actinoid Solid" id="Md">101<br>Md</td>
+			<td elvl="102" weight="259" fullName="Nobelium" class="tdEle Actinoid Solid" id="No">102<br>No</td>
+			<td elvl="103" weight="266" fullName="Lawrencium" class="tdEle Actinoid Solid" id="Lr">103<br>Lr</td>
+			<td elvl="104" weight="267" fullName="Rutherfordium" class="tdEle Transition" id="Rf">104<br>Rf</td>
+			<td elvl="105" weight="268" fullName="Dubnium" class="tdEle Transition" id="Db">105<br>Db</td>
+			<td elvl="106" weight="269" fullName="Seaborgium" class="tdEle Transition" id="Sg">106<br>Sg</td>
+			<td elvl="107" weight="270" fullName="Bohrium" class="tdEle Transition" id="Bh">107<br>Bh</td>
+			<td elvl="108" weight="277" fullName="Hassium" class="tdEle Transition" id="Hs">108<br>Hs</td>
+			<td elvl="109" weight="278" fullName="Meitnerium" class="tdEle Unknown" id="Mt">109<br>Mt</td>
+			<td elvl="110" weight="281" fullName="Darmstadtium" class="tdEle Unknown" id="Ds">110<br>Ds</td>
+			<td elvl="111" weight="282" fullName="Roentgenium" class="tdEle Unknown" id="Rg">111<br>Rg</td>
+			<td elvl="112" weight="285" fullName="Copernicuim" class="tdEle Unknown" id="Cn">112<br>Cn</td>
+			<td elvl="113" weight="286" fullName="Nihonium" class="tdEle Unknown" id="Nh">113<br>Nh</td>
+			<td elvl="114" weight="289" fullName="Flerovium" class="tdEle Unknown" id="Fl">114<br>Fl</td>
+			<td elvl="115" weight="290" fullName="Moscovium" class="tdEle Unknown" id="Mc">115<br>Mc</td>
+			<td elvl="116" weight="293" fullName="Livermorium" class="tdEle Unknown" id="Lv">116<br>Lv</td>
+			<td elvl="117" weight="294" fullName="Tennessine" class="tdEle Unknown" id="Ts">117<br>Ts</td>
+			<td elvl="118" weight="294" fullName="Oganesson" class="tdEle Unknown" id="Og">118<br>Og</td>
+		</tr>
+	</table>
+</body>
+<footer>
+</footer>
+</html>

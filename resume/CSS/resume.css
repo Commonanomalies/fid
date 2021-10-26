@@ -2,6 +2,10 @@ body{
 	margin: 0;
 	padding: 0;
 	background-color: #89D7EC;
+	font-family: Tahoma, sans-serif;
+}
+p{
+
 }
 h1{
 	text-align: center;
@@ -12,6 +16,14 @@ h1{
 h2{
 	text-align: left;
 	margin-bottom: 0px;
+	background: linear-gradient(90deg, rgba(137,215,236,1) 0%, rgba(114,199,222,0) 72%);
+	padding: 5px;
+	letter-spacing: 5px;
+}
+h3{
+	background: linear-gradient(90deg, rgba(137,215,236,0.3) 0%, rgba(114,199,222,0) 70%);
+	padding: 5px;
+	margin-left: 15px;
 }
 h3, h4{
 	font-weight: bold;
@@ -33,6 +45,7 @@ hr{
 }
 ul{
 	list-style-type: circle;
+	line-height: 24px;
 }
 #myInfo{
 	font-weight: bold;

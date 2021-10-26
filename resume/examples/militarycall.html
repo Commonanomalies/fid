@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Military Call Signs</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Change letter to NATO phonetic alphabet, International radiotelephony spelling alphabet">
+    <meta name="keywords" content="NATO,phonetic,alphabet,military,letter,airforce,navy,alpha,bravo,charlie,delta,echo,foxtrot,golf,hotel,india,juliett,kilo,lima,mike,november,oscar,papa,quebec,romeo,sierra,tango,uniform,victor,whisky,xray,yankee,zulu,speech,hearing,speech and hearing,linguistically,alphabet,phoneticnotation,linguists,spoken language,sounds,voice,voiced,throat,letters,words,syllables,language education,education,North Atlantic Treaty Organization,alpha,call sign,call signs,call,sign,signs,military call sign,military call signs">
+    <meta name="author" content="Erin Hiles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var pho = ["Alpha - (AL-FAH)","Bravo - (BRAH-VOH)","Charlie - (CHAR-LEE)","Delta - (DELL-TAH)","Echo - (ECK-OH)","Foxtrot - (FOKS-TROT)","Golf - (GOLF)","Hotel - (HOH-TEL)","India - (IN-DEE-AH)","Juliett - (JEW-LEE-ETT)","Kilo - (KEY-LOH)","Lima - (LEE-MAH)","Mike - (MIKE)","November - (NO-VEM-BER)","Oscar - (OSS-CAH)","Papa - (PAH-PAH)","Quebec - (KEH-BECK)","Romeo - (ROW-ME-OH)","Sierra - (SEE-AIR-RAH)","Tango - (TAN-GO)","Uniform - (YOU-NEE-FORM)","Victor - (VIK-TAH)","Whisky - (WISS-KEY)","Xray - (EXKS-RAY)","Yankee - (YANG-KEY)","Zulu - (ZOO-LOO)","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Zero"];
+        var alph = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0"]
+        function phoneticThatShit(){
+            var isLetNum = /^[A-Za-z0-9 ]+$/;
+            var str = document.getElementById("inputStr").value;
+            var len = str.length;
+            var isValid = false;
+            str = str.toLowerCase();
+            document.getElementById("outputDiv").innerHTML = "";
+            if(str.match(isLetNum)){
+                isValid = true;
+            }
+
+            
+            if(isValid){
+                for(x = 0; x < len; x++){
+                    for(i = 0; i < pho.length; i++){
+                        if(str[x] === " "){
+
+                        }else if(str[x] == alph[i]){
+                            document.getElementById("outputDiv").innerHTML += pho[i]+'<br />';
+                        }
+                    }
+                }   
+                
+            }else{
+                document.getElementById("outputDiv").innerHTML = 'Needs to be a letter or Number';
+            }
+            if(len == 0){
+                    document.getElementById("outputDiv").innerHTML = 'Alpha - (AL-FAH)<br />Bravo - (BRAH-VOH)<br />Charlie - (CHAR-LEE)<br />';   
+            }
+        }
+    </script>
+</head>
+<body>
+<div style=" margin:25px auto;">
+<center><b style="font-size:225%; padding:auto;">Start Typing Letters to get Military Call Sign Equivalents</b></center><br />
+</div>
+<div style="margin: 50px auto 0px auto;">
+    <center><input autofocus id="inputStr" pattern="[a-zA-Z0-9]+" placeholder="abc" style="font-size: 200%; width:65%;" onkeyup="phoneticThatShit()" /></center>
+</div>
+<div id="outputDiv" style="margin: 10px auto; background-color: #dbdbdb; width:65%; font-size:155%;">
+Alpha - (AL-FAH)<br />Bravo - (BRAH-VOH)<br />Charlie - (CHAR-LEE)<br />
+</div>
+<div style="text-align: center">
+    <a style="text-align: center; font-weight: strong;" href="../index.html"><<--Go back in time</a>
+</div>
+</body>
+</html>

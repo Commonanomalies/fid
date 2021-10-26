@@ -1,0 +1,74 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #89D7EC;
+}
+h1{
+	text-align: center;
+	font-size: 40px;
+	font-family: Tahoma, sans-serif;
+	letter-spacing: 12px;
+	}
+h2{
+	text-align: left;
+	margin-bottom: 0px;
+}
+h3, h4{
+	font-weight: bold;
+	font-size: 24px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h3+p{
+	font-weight: bold;
+	font-size: 18px;
+}
+h4{
+	text-align: center;
+}
+hr{
+	height: 2px;
+	background-color: #666666;
+	margin-top: 2px;
+}
+ul{
+	list-style-type: circle;
+}
+#myInfo{
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+#myInfo p{
+	line-height: 2px;
+	text-align: center;
+}
+
+#mainDiv{
+	width: 900px;
+	margin: 70px auto 70px auto;
+	padding:  50px;
+	background-color: #FFFFFF;
+	box-shadow: -29px 33px 35px -17px #000000;
+	border: 1px solid #999999;
+}
+.divThumb{
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	overflow:  hidden;
+	margin:  10px;
+	box-shadow: 2px 5px 28px -14px #000000;
+	border: 1px solid #777777;
+	border-radius: 25px;
+}
+.divThumb:hover{
+	border: 1px solid #89D7EC;
+	box-shadow: -5px 3px 35px -9px #000000;
+}
+.divThumb img{
+	height: 100%;
+}
+
+#workSampleDiv{
+	text-align: center;
+}

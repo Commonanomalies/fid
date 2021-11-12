@@ -77,3 +77,24 @@ footer div{
 	padding: 5px;
 	margin-bottom: 2em;
 }
+nav{
+	text-align: center;
+}
+#topMenu nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	text-decoration: none;
+	padding:  15px;
+	margin: auto;
+	font-size: 24px;
+	font-weight: bold;
+}
+#topMenu nav ul li:hover a{
+	border-bottom: 2px solid #ada79e;
+	color: #432807;
+}
+
+#topMenu nav ul li a{
+	text-decoration: none;
+	color: #aa6614;
+}
